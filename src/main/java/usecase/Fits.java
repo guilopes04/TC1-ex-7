@@ -13,17 +13,17 @@ public class Fits {
         this.y = y;
     }
     public boolean handle() {
-        return fitsHorizontal() || fitsVertical();
+        return (fitsHorizontal() || fitsVertical());
     }
 
     private boolean fitsHorizontal() {
-        return (photo1.area() <= x * y && photo2.area() <= x * y) ||
-                (photo1.area() <= y * x && photo2.area() <= y * x);
+        return (photo1.area() < x * y && photo2.area() < x * y) ||
+                (photo1.area() < y * x && photo2.area() < y * x);
     }
 
     private boolean fitsVertical() {
-        return (photo1.area() <= y * x && photo2.area() <= y * x) ||
-                (photo1.area() <= x * y && photo2.area() <= x * y);
+        return (photo1.area() < y * x && photo2.area() < y * x) ||
+                (photo1.area() < x * y && photo2.area() < x * y);
     }
 }
 
