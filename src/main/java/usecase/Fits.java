@@ -1,8 +1,8 @@
 package usecase;
 
 public class Fits {
-    private Photo photo1;
-    private Photo photo2;
+    private final Photo photo1;
+    private final Photo photo2;
     private int x;
     private int y;
 
